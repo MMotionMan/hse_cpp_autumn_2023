@@ -6,7 +6,7 @@
 TEST (MyAllocator, Size_EQ_zero) {
     Allocator al;
     al.makeAllocator(0);
-    char* block_ptr = al.alloc(1);
+    char *block_ptr = al.alloc(1);
     ASSERT_EQ(block_ptr, nullptr);
 }
 
@@ -14,7 +14,7 @@ TEST (MyAllocator, Size_EQ_zero) {
 TEST (MyAllocator, Size_LT_maxSize) {
     Allocator al;
     al.makeAllocator(15);
-    char* block_ptr = al.alloc(8);
+    char *block_ptr = al.alloc(8);
     ASSERT_NE(block_ptr, nullptr);
 }
 
@@ -22,7 +22,7 @@ TEST (MyAllocator, Size_LT_maxSize) {
 TEST (MyAllocator, Size_EQ_maxSize) {
     Allocator al;
     al.makeAllocator(15);
-    char* block_ptr = al.alloc(15);
+    char *block_ptr = al.alloc(15);
     ASSERT_NE(block_ptr, nullptr);
 }
 
@@ -30,7 +30,7 @@ TEST (MyAllocator, Size_EQ_maxSize) {
 TEST (MyAllocator, Size_GT_maxSize) {
     Allocator al;
     al.makeAllocator(15);
-    char* block_ptr = al.alloc(17);
+    char *block_ptr = al.alloc(17);
     ASSERT_TRUE(block_ptr == nullptr);
 }
 
@@ -38,8 +38,8 @@ TEST (MyAllocator, Size_GT_maxSize) {
 TEST (MyAllocator, TwoAlloc) {
     Allocator al;
     al.makeAllocator(20);
-    char* first_block_ptr = al.alloc(5);
-    char* second_block_ptr = al.alloc(10);
+    char *first_block_ptr = al.alloc(5);
+    char *second_block_ptr = al.alloc(10);
     ASSERT_GT(second_block_ptr, first_block_ptr);
 }
 
