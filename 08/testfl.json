@@ -1,0 +1,7 @@
+{
+"str_str": "This is a string.",
+"int_str": -12345,
+"float_str": 1.001,
+"bool_str": true,
+"bool_str3": false
+}
